@@ -5,13 +5,13 @@ class PigLatinizer
 
   def translate(str)
     if str.split(" ").count == 1
-      piglatinize(str)
+      pig_latinize(str)
     else
       pig_latin(str)
     end
   end
 
-  def piglatinize(word)
+  def pig_latinize(word)
     a = ('a'..'z').to_a
     v = %w[a e i o u A E I O U]
     c = a - v
