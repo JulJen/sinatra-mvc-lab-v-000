@@ -15,7 +15,6 @@ class PigLatinizer
     a = ('a'..'z').to_a
     v = %w[a e i o u A E I O U]
     c = a - v
-    translate(word)
 # binding.pry
     # if v.include?(word[0])
     #   word + 'way'
