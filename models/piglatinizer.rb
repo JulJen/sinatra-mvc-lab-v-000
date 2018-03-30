@@ -25,7 +25,8 @@ class PigLatinizer
     elsif c.include?(word[0].downcase)
       word[1..-1] + word[0] + 'ay'
     else
-      word + 'way'
+      pig_latin(word)
+      # word + 'way'
     end
   end
 
