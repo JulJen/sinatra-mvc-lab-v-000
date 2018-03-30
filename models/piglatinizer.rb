@@ -11,35 +11,23 @@ class PigLatinizer
     end
   end
 
-#   def piglatinize(word)
-#     a = ('a'..'z').to_a
-#     v = %w[a e i o u A E I O U]
-#     c = a - v
-# # binding.pry
-#     # if v.include?(word[0])
-#     #   word + 'way'
-#     if c.include?(word[0].downcase) && c.include?(word[1]) && c.include?(word[2])
-#       word[3..-1] + word[0..2] + 'ay'
-#     elsif c.include?(word[0].downcase) && c.include?(word[1])
-#       word[2..-1] + word[0..1] + 'ay'
-#     elsif c.include?(word[0].downcase)
-#       word[1..-1] + word[0] + 'ay'
-#     else
-#       word + 'way'
-#     end
-#   end
-
-def piglatinize(word)
-  if word.match(/^[^AaEeOoIiUu]{3}/)
-    "#{word[3..-1]}#{word[0..2]}ay"
-  elsif word.match(/^[^AaEeOoIiUu]{2}/)
-    "#{word[2..-1]}#{word[0..1]}ay"
-  elsif word.match(/^[^AaEeOoIiUu]/)
-    "#{word[1..-1]}#{word[0]}ay"
-  else
-    "#{word}way"
+  def piglatinize(word)
+    a = ('a'..'z').to_a
+    v = %w[a e i o u A E I O U]
+    c = a - v
+# binding.pry
+    # if v.include?(word[0])
+    #   word + 'way'
+    if c.include?(word[0].downcase) && c.include?(word[1]) && c.include?(word[2])
+      word[3..-1] + word[0..2] + 'ay'
+    elsif c.include?(word[0].downcase) && c.include?(word[1])
+      word[2..-1] + word[0..1] + 'ay'
+    elsif c.include?(word[0].downcase)
+      word[1..-1] + word[0] + 'ay'
+    else
+      word + 'way'
+    end
   end
-end
 
   #
   # def piglatinize(word)
