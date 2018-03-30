@@ -5,13 +5,13 @@ class PigLatinizer
 
   def translate(str)
     if str.split(" ").count == 1
-      pig_latinize(str)
+      piglatinize(str)
     else
       pig_latin(str)
     end
   end
 
-  def pig_latinize(word)
+  def piglatinize(word)
     a = ('a'..'z').to_a
     v = %w[a e i o u A E I O U]
     c = a - v
@@ -47,7 +47,7 @@ class PigLatinizer
   # end
   def pig_latin(str)
     str.split.collect do |word|
-      word.split.each {|t| pig_latinize(t).join(" ")}
+      word.split.each {|t| piglatinize(t).join(" ")}
     end
   end
 
