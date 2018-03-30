@@ -26,6 +26,8 @@ class PigLatinizer
       word[1..-1] + word[0] + 'ay'
     elsif !(word.downcase)[0].scan(/[aeiou]/).empty?
       word + 'way'
+    else
+      word[word.split(/[aeiou]/)[0].length..-1] + word.split(/[aeiou]/)[0] + 'ay'
     end
   end
 
