@@ -15,7 +15,7 @@ class PigLatinizer
     a = ('a'..'z').to_a
     v = %w[a e i o u A E I O U]
     c = a - v
-binding.pry
+
     if c.include?(word[0].downcase) && c.include?(word[1]) && c.include?(word[2])
       word[3..-1] + word[0..2] + 'ay'
     elsif c.include?(word[0].downcase) && c.include?(word[1])
@@ -44,6 +44,7 @@ binding.pry
   #   end
   # end
   def pig_latin(str)
+binding.pry
     str.split.map {|word| piglatinize(word)}.join(" ")
   end
 
