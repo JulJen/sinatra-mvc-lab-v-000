@@ -4,7 +4,7 @@ class PigLatinizer
   # attr_reader :text
 
   def translate(str)
-binding.pry
+# binding.pry
     if str.split(" ").count == 1
       piglatinize(str)
     else
