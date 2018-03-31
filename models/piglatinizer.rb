@@ -44,6 +44,7 @@ class PigLatinizer
   #   end
   # end
   def pig_latin(str)
+binding.pry
     str.split.map {|word| piglatinize_word(word)}.join(" ")
   end
 
