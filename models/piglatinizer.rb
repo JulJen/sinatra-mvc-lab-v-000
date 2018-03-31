@@ -32,6 +32,6 @@ class PigLatinizer
 
   def pig_latin(str)
 # binding.pry
-    str.split.map {|word| piglatinize(word)}.join(" ")
+    str.split.map {|word| translate_piglatinize(word)}.join(" ")
   end
 end
