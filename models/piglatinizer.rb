@@ -3,16 +3,16 @@ require 'pry'
 class PigLatinizer
   # attr_reader :text
 
-  def translate(str)
+  def piglatinize(str)
 # binding.pry
     if str.split(" ").count == 1
-      piglatinize(str)
+      translate_piglatinize(str)
     else
       pig_latin(str)
     end
   end
 
-  def piglatinize(word)
+  def translate_piglatinize(word)
     a = ('a'..'z').to_a
     v = %w[a e i o u A E I O U]
     c = a - v
