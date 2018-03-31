@@ -23,6 +23,7 @@ class PigLatinizer
       word[2..-1] + word[0..1] + 'ay'
     elsif c.include?(word[0].downcase)
       word[1..-1] + word[0] + 'ay'
+binding.pry
     else
       word + 'way'
     end
